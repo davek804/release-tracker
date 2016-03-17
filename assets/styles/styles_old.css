@@ -1,0 +1,91 @@
+	td {
+		font-size:1.5em;
+		color: black;
+	}
+
+body {
+	 background: url("images/blue-pattern-bg-2.png");
+	 background: black;
+}	
+
+.title-container {
+		display:table; 
+		margin: auto; 
+		width:95%; 
+		height:100%; 
+		background: url("images/60-gray.png");
+		align:center; 
+		border-radius:7px;
+		border:1px solid black
+	}
+
+	tr {
+		margin-bottom:5%;
+	}
+
+	.btn {
+		border-radius:3px;
+		background-color:#428bca;
+		<!--//the original color!-->
+		width:auto;
+		border:1px solid #000000;
+	}
+
+	button {
+		border-radius:3px;
+		background-color:gray;
+		width:auto;
+		border:1px solid #000000;
+	}
+
+	
+
+	.ui-dialog-titlebar {
+		font-family: Roboto, Calibri, sans-serif;  
+		font-size:1em;  
+		text-align:center;
+		background: none;
+		border: none;
+	}
+
+	.ui-dialog-content {
+		background: green;
+		border: none;
+	}
+
+	.ui-button-icon-primary {
+
+	}
+
+	.listTab {
+		font-family: Roboto, Calibri, sans-serif; 
+		font-size:.6em;   
+		color: white;
+		width: 100%;
+		height: 100%;
+	}
+
+	.tr {
+		border: solid;
+		border-width: 1px 0;
+	}
+
+	.dialog-TD {
+		word-wrap:break-word
+		align:left;
+		vertical-align:top;
+		border: 1px solid gray;
+	}
+
+	.dialog-TD-oneLineSpan {
+		vertical-align:top;
+		white-space:nowrap;
+	}
+
+	.textArea {
+		border: 0px ;
+	}
+
+	@keyframes example {
+		animation-name:example;animation-duration:4s;
+}
