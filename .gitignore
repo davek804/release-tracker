@@ -1,2 +1,5 @@
-/id_rsa_personal		
-/id_rsa_personal.pub
+id_rsa_personal		
+id_rsa_personal.pub
+[Tt]humbs.db
+*.DS_Store
+
