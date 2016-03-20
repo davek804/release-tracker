@@ -19,7 +19,7 @@
 body {
   height: 100%;
   overflow: hidden;
-}*/
+  }*/
 /* gets the actual input out of the way; 
 we're going to style the label instead */
 
@@ -38,7 +38,6 @@ we're going to style the label instead */
   left: 0px;
   height: 50px;
   width: 50px;
-  background: url("../images/menu.png");
   display: block;
   position: fixed;
   background: rgba(255, 255, 255, .0);
@@ -47,7 +46,6 @@ we're going to style the label instead */
 /* adds our "hamburger" menu icon */
 
 #drawer-toggle-label:before {
-  background: url("../images/menu.png");
   content: '';
   display: block;
   position: absolute;
@@ -102,6 +100,7 @@ header {
 #drawer-toggle:checked ~ #drawer-toggle-label {
   height: 100%;
   width: calc(100% - 300px);
+  opacity:0;
   /*background: rgba(255, 255, 255, .8);*/
 }
 
@@ -117,3 +116,81 @@ header {
 #drawer-toggle:checked ~ #page-content {
   margin-left: 300px;
 }
+
+.drawer-ad {
+  width:90%;
+  max-height:250px;
+  position: absolute;
+  bottom: 0;
+}
+
+.actualAd {
+  align:bottom;
+  max-width:100%;
+  max-height:100%;
+}
+
+#layout-type-container {
+  display:table;
+  width:100%;
+}
+
+#layout-type-row {
+  display:table-row;
+  text-align:center;
+}
+
+#view-icon-weekly {
+  content:url("../images/view-icon-weekly.png");
+  display:inline-block;
+  margin-right:8px;
+}
+
+#view-icon-monthly {
+  content:url("../images/view-icon-monthly.png");
+  display:inline-block;
+margin-right:8px;
+}
+
+#view-icon-yearly {
+  content:url("../images/view-icon-yearly.png");
+  display:inline-block;
+
+}
+
+div.menu-item {
+  display:table;
+  padding-bottom:15px;
+}
+
+span {
+  margin-left:50px;
+  display:table-cell;
+  vertical-align:middle;
+  font-family:Roboto, Calibri, sans-serif;
+  color:white;     
+}
+
+#menu-item-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+#menu-item-toggle-label {
+  width:20px;
+  height:20px;
+  content:url('../images/checkbox-disabled.png');
+  display: inline-block;
+  margin-right:5px;
+}
+
+#menu-item-toggle:checked ~ #menu-item-toggle-label{
+  width:20px;
+  height:20px;
+  content:url('../images/checkbox-enabled.png');
+  display: inline-block;
+  margin-right:5px;
+}
+
+
+

@@ -1,6 +1,13 @@
 
 <html>
 <head>
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#003366">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#003366">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#003366">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -18,43 +25,52 @@
 	<!--<div id="container" class="container" style="width:100%">-->
 
 	<div class="header-container">
+
 		<div class="menu-container">
 			<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
 			<label for="drawer-toggle" id="drawer-toggle-label"></label>
-			<!--<img src="assets/images/menu.png" class="menu-img" id="drawer-toggle"></img>-->
 			<nav id="drawer">
-
+				<div id="layout-type-container">
+					<div id="layout-type-row">
+						<div id="view-icon-weekly"></div>
+						<div id="view-icon-monthly"></div>
+						<div id="view-icon-yearly"></div>
+					</div>
+				</div>
+				<h2>Lines of Business</h2>
 				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle-1"><labeL for="menu-item-toggle-1" class="menu-item-toggle-1">Enterprise</labeL>
+					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+					<span>Enterprise</span>
+				</div>
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+					<span>Better Money Habits</span>
+				</div>
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+					<span>Merrill Lynch Maintenance</span>
+				</div>
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+					<span>BMH Merge</span>
+				</div>
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+					<span>HLG & LAH</span>
 				</div>
 
-				<div class="menu-item-2">
-					<input type="checkbox" id="menu-item-toggle-2"><labeL for="menu-item-toggle-2" class="menu-item-toggle-2">BMH</labeL>
-				</div>
 
-				<div class="menu-item-3">
-					<input type="checkbox" id="menu-item-toggle-3"><labeL for="menu-item-toggle-3" class="menu-item-toggle-3">BMH Merge</labeL>
-				</div>
-
-				<div class="menu-item-4">
-					<input type="checkbox" id="menu-item-toggle-4"><labeL for="menu-item-toggle-4" class="menu-item-toggle-4">ML Maintenance</labeL>
-				</div>
-
-				<div class="menu-item-5">
-					<input type="checkbox" id="menu-item-toggle-5"><labeL for="menu-item-toggle-5" class="menu-item-toggle-5">HLG & LAH</labeL>
-				</div>
 				<div class="drawer-ad">
 					<div class="actualAd">
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Dkelley.net - Reward Tracker -->
+						<!-- DKelley.net - Release Tracker Sidebar -->
 						<ins class="adsbygoogle"
-						style="display:block"
+						style="display:inline-block;width:300px;height:250px"
 						data-ad-client="ca-pub-0512146023105075"
-						data-ad-slot="8438635950"
-						data-ad-format="auto"></ins>
-						<script>
+						data-ad-slot="6285748350"></ins>
+						<!--<script>
 							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+						</script>-->
 					</div>
 				</div>
 			</nav>

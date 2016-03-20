@@ -4,6 +4,12 @@ body {
 	border-radius: 7px;
 }
 
+h2 {
+	color:white;
+	font-family:Roboto, Calibri, sans-serif; 
+	text-align:center;
+}
+
 .title {
 	font-family:Roboto, Calibri, sans-serif;  
 	font-size:2em;
@@ -116,38 +122,3 @@ button {
 	animation-name:example;animation-duration:4s;
 }
 
-.drawer-ad {
-	width:90%;
-	max-height:250px;
-	position: absolute;
-	bottom: 0;
-}
-
-.actualAd {
-		align:bottom;
-}
-
-.menu-item-toggle-1 {
-	color:#428bca;
-	font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-2 {
-	color:#428bca;
-	font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-3 {
-	color:#428bca;
-	font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-4 {
-	color:#428bca;
-	font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-5 {
-	color:#428bca;
-	font-family:Roboto, Calibri, sans-serif;
-}
