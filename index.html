@@ -1,93 +1,90 @@
 
 <html>
 <head>
-	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#003366">
-	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#003366">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#003366">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/drawer.css">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="assets/scripts/main.js"></script>
 	<title>Release Tracker</title>
 </head>
-<script src="assets/scripts/main.js"></script>
-<!--<body style="background-color:#428bca">-->
-<!--<body style="background-color:grey">-->
 <body>
-	<meta name="viewport" content="width=device-width, initial-scale=.8">
-	<!--<div id="container" class="container" style="width:100%">-->
-
-	<div class="header-container">
-
-		<div class="menu-container">
-			<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
-			<label for="drawer-toggle" id="drawer-toggle-label"></label>
-			<nav id="drawer">
-				<div id="layout-type-container">
-					<div id="layout-type-row">
-						<div id="view-icon-weekly"></div>
-						<div id="view-icon-monthly"></div>
-						<div id="view-icon-yearly"></div>
+	<meta name="viewport" content="width=device-width,initial-scale=.8">
+	<div id="container">
+		<div class="header-container">
+			<p class="title">Release Tracker</p>
+			<div class="menu-container">
+				<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
+				<label for="drawer-toggle" id="drawer-toggle-label"></label>
+				<nav id="drawer">
+					<div id="layout-type-container">
+						<div id="layout-type-row">
+							<div id="view-icon-weekly"></div>
+							<div id="view-icon-monthly"></div>
+							<div id="view-icon-yearly"></div>
+						</div>
 					</div>
-				</div>
-				<h2>Lines of Business</h2>
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-					<span>Enterprise</span>
-				</div>
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-					<span>Better Money Habits</span>
-				</div>
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-					<span>Merrill Lynch Maintenance</span>
-				</div>
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-					<span>BMH Merge</span>
-				</div>
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-					<span>HLG & LAH</span>
-				</div>
+					<h2>Lines of Business</h2>
+					<div class="menu-item">
+						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+						<span>Enterprise</span>
+					</div>
+					<div class="menu-item">
+						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+						<span>Better Money Habits</span>
+					</div>
+					<div class="menu-item">
+						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+						<span>Merrill Lynch Maintenance</span>
+					</div>
+					<div class="menu-item">
+						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+						<span>BMH Merge</span>
+					</div>
+					<div class="menu-item">
+						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+						<span>HLG & LAH</span>
+					</div>
 
-
-				<div class="drawer-ad">
-					<div class="actualAd">
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- DKelley.net - Release Tracker Sidebar -->
-						<ins class="adsbygoogle"
-						style="display:inline-block;width:300px;height:250px"
-						data-ad-client="ca-pub-0512146023105075"
-						data-ad-slot="6285748350"></ins>
-						<!--<script>
+					<div id="other-calendars-container">
+						<h2>Other Calendars</h2>
+						<div class="menu-item">
+							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+							<span>Boston Office PTO & Holidays</span>
+						</div>
+						<div class="menu-item">
+							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+							<span>Costa Rica PTO & Holidays</span>
+						</div>
+						<div class="menu-item">
+							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
+							<span>India PTO & Holidays</span>
+						</div>
+					</div>
+					<div class="drawer-ad">
+						<div class="actualAd">
+							<!--	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							
+							<ins class="adsbygoogle"
+							style="display:inline-block;width:300px;height:250px"
+							data-ad-client="ca-pub-0512146023105075"
+							data-ad-slot="6285748350"></ins>
+							<script>
 							(adsbygoogle = window.adsbygoogle || []).push({});
 						</script>-->
 					</div>
 				</div>
 			</nav>
+			</div>
 		</div>
-		<p class="title">Release Tracker</p>
+		<div id="page-content-container">
+			page-content-container
+		</div>
 	</div>
-	<div id="button-container" style="width:100%">
-
-		<div id="dynamicUsersTable" style="width:100%; font-family:Roboto, Calibri, sans-serif"></div>
-
-	</div>
-	<div id="dialog" style="display:none;animation-name:example;animation-duration:4s;" >
-		<input autofocus style="display:none">
-		<span id "focusCatch" style="display:none"></span>
-		<table class="listTab" id="listTable"></table>
-	</div>
-</div>
-</div>
 </body>
 </html>
