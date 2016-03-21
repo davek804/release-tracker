@@ -130,6 +130,17 @@ header {
   max-height:100%;
 }
 
+.drawer-ad {
+  width:90%;
+  max-height:250px;
+  position: absolute;
+  bottom: 0;
+}
+
+.actualAd {
+    align:bottom;
+}
+
 #layout-type-container {
   display:table;
   width:100%;
@@ -163,7 +174,7 @@ div.menu-item {
   padding-bottom:15px;
 }
 
-span {
+.menu-item-title {
   margin-left:50px;
   display:table-cell;
   vertical-align:middle;
@@ -191,6 +202,81 @@ span {
   display: inline-block;
   margin-right:5px;
 }
+
+#weekly-radio {
+  position:absolute;
+  opacity:0;
+}
+
+#monthly-radio {
+  position:absolute;
+  opacity:0;
+}
+
+#yearly-radio {
+  position:absolute;
+  opacity:0;
+}
+
+#weekly-radio-label {
+  content:url("../images/view-icon-weekly.png");
+  display:inline-block;
+  margin-right:8px;
+}
+#monthly-radio-label {
+  content:url("../images/view-icon-monthly.png");
+  display:inline-block;
+  margin-right:8px;
+}
+#yearly-radio-label {
+  content:url("../images/view-icon-yearly.png");
+  display:inline-block;
+  margin-right:8px;
+}
+
+#weekly-radio:checked ~ #weekly-radio-label{
+  content:url('../images/view-icon-weekly-checked.png');
+  display: inline-block;
+  margin-right:8px;
+}
+
+#monthly-radio:checked ~ #monthly-radio-label{
+  content:url('../images/view-icon-monthly-checked.png');
+  display: inline-block;
+  margin-right:8px;
+}
+
+#yearly-radio:checked ~ #yearly-radio-label{
+  content:url('../images/view-icon-yearly-checked.png');
+  display: inline-block;
+  margin-right:8px;
+}
+
+.menu-item-toggle-1 {
+  color:#428bca;
+  font-family:Roboto, Calibri, sans-serif;
+}
+
+.menu-item-toggle-2 {
+  color:#428bca;
+  font-family:Roboto, Calibri, sans-serif;
+}
+
+.menu-item-toggle-3 {
+  color:#428bca;
+  font-family:Roboto, Calibri, sans-serif;
+}
+
+.menu-item-toggle-4 {
+  color:#428bca;
+  font-family:Roboto, Calibri, sans-serif;
+}
+
+.menu-item-toggle-5 {
+  color:#428bca;
+  font-family:Roboto, Calibri, sans-serif;
+}
+
 
 
 

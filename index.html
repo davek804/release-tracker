@@ -7,63 +7,75 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/drawer.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script src="assets/scripts/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+	</script>
+	<script src="//code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
+	</script>
+	<script src="assets/scripts/main.js">
+	</script>
 	<title>Release Tracker</title>
 </head>
 <body>
 	<meta name="viewport" content="width=device-width,initial-scale=.8">
-	<div id="container">
+	<div class="container">
 		<div class="header-container">
-			<p class="title">Release Tracker</p>
+			<div class="title-container">
+			<span class="title-span">Release Tracker</span>
+			</div>
 			<div class="menu-container">
 				<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
 				<label for="drawer-toggle" id="drawer-toggle-label"></label>
 				<nav id="drawer">
 					<div id="layout-type-container">
 						<div id="layout-type-row">
-							<div id="view-icon-weekly"></div>
-							<div id="view-icon-monthly"></div>
-							<div id="view-icon-yearly"></div>
+							<input type="radio" name="layout-type-radio" id="weekly-radio" value="weekly" checked>
+							<label for="weekly-radio" id="weekly-radio-label"></label>
+
+							<input type="radio" name="layout-type-radio" id="monthly-radio" value="monthly">
+							<label for="monthly-radio" id="monthly-radio-label"></label>
+
+							<input type="radio" name="layout-type-radio" id="yearly-radio" value="yearly">
+							<label for="yearly-radio" id="yearly-radio-label"></label>
+
 						</div>
 					</div>
 					<h2>Lines of Business</h2>
 					<div class="menu-item">
 						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-						<span>Enterprise</span>
+						<span class="menu-item-title">Enterprise</span>
 					</div>
 					<div class="menu-item">
 						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-						<span>Better Money Habits</span>
+						<span class="menu-item-title">Better Money Habits</span>
 					</div>
 					<div class="menu-item">
 						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-						<span>Merrill Lynch Maintenance</span>
+						<span class="menu-item-title">Merrill Lynch Maintenance</span>
 					</div>
 					<div class="menu-item">
 						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-						<span>BMH Merge</span>
+						<span class="menu-item-title">BMH Merge</span>
 					</div>
 					<div class="menu-item">
 						<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-						<span>HLG & LAH</span>
+						<span class="menu-item-title">HLG & LAH</span>
 					</div>
 
 					<div id="other-calendars-container">
 						<h2>Other Calendars</h2>
 						<div class="menu-item">
 							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-							<span>Boston Office PTO & Holidays</span>
+							<span class="menu-item-title">Boston Office PTO & Holidays</span>
 						</div>
 						<div class="menu-item">
 							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-							<span>Costa Rica PTO & Holidays</span>
+							<span class="menu-item-title">Costa Rica PTO & Holidays</span>
 						</div>
 						<div class="menu-item">
 							<input type="checkbox" id="menu-item-toggle"><labeL for="menu-item-toggle" id="menu-item-toggle-label"></labeL>
-							<span>India PTO & Holidays</span>
+							<span class="menu-item-title">India PTO & Holidays</span>
 						</div>
 					</div>
 					<div class="drawer-ad">
@@ -80,11 +92,13 @@
 					</div>
 				</div>
 			</nav>
-			</div>
 		</div>
-		<div id="page-content-container">
-			page-content-container
-		</div>
+
 	</div>
+	<div id="page-content-container">
+
+	</div>
+</div>
+</div>
 </body>
 </html>
