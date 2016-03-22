@@ -57,6 +57,7 @@ h2 {
 .add-event-container {
 	display:table-cell;
 	height:0px;
+	width:40px;
 }
 
 #add-event-icon {
