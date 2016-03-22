@@ -25,16 +25,19 @@ h2 {
 .header-container {
 	display:table-row;
 	height:0px; 
-	margin: auto; 
-
-	
+	margin: auto;	
 }
 
 .title-container {	
 	display:table;
 	margin:auto;
-	position:relative;
-
+	height:0px;
+	border-left: 1px solid #428bca;
+	border-right: 1px solid #428bca;
+	border-bottom: 1px solid #428bca;
+	border-top: 1px solid black;
+	border-radius: 0 0 7px 7px;
+	margin-top: -1px;
 }
 
 .title-span {
@@ -44,20 +47,23 @@ h2 {
 	font-family:Roboto, Calibri, sans-serif;  
 	color:white;  	
 	font-size:2em;	
-	border-left: 1px solid #428bca;
-	border-right: 1px solid #428bca;
-	border-bottom: 1px solid #428bca;
-	border-top: 1px solid black;
-	border-radius: 0 0 7px 7px;
-	margin-top: -1px;
 }
 
 .menu-container {
-	width:20px;
-	height:20px;
-	position:absolute;
-	left:20;
-	top: 20;
+	display:table-cell;
+	height: 0px;
+}
+
+.add-event-container {
+	display:table-cell;
+	height:0px;
+}
+
+#add-event-icon {
+  content:url("../images/add-release.png");
+  height: 30px;
+  width: 30px;
+  margin:auto;
 }
 
 #page-content-container {
