@@ -57,6 +57,27 @@ we're going to style the label instead */
   box-shadow: 0 6px 0 white, 0 12px 0 white;
 } 
 
+#add-release-container {
+  display:table;
+  padding-top:20px;
+}
+
+.add-release-title {
+  margin-left:50px;
+  display:table-cell;
+  vertical-align:middle;
+  font-family:Roboto, Calibri, sans-serif;
+  color:white;   
+}
+
+#add-release-icon {
+  width:20px;
+  height:20px;
+  content:url('../images/add-release.png');
+  display: inline-block;
+  margin-right:5px;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -100,7 +121,6 @@ header {
 #drawer-toggle:checked ~ #drawer-toggle-label {
   height: 100%;
   width: calc(100% - 300px);
-  opacity:0;
   /*background: rgba(255, 255, 255, .8);*/
 }
 
@@ -251,32 +271,6 @@ div.menu-item {
   display: inline-block;
   margin-right:8px;
 }
-
-.menu-item-toggle-1 {
-  color:#428bca;
-  font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-2 {
-  color:#428bca;
-  font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-3 {
-  color:#428bca;
-  font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-4 {
-  color:#428bca;
-  font-family:Roboto, Calibri, sans-serif;
-}
-
-.menu-item-toggle-5 {
-  color:#428bca;
-  font-family:Roboto, Calibri, sans-serif;
-}
-
 
 
 

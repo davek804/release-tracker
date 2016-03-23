@@ -1,125 +1,186 @@
-	var uniqueUsers = new Array();
-	var scores = new Array();
-	var database = new Array();
+$('body').height($(window).height());
+$('body').width($(window).width()*2);
 
-	$.post('connection.php?request=' + "details", function(data,status) {localizeDB(data, status)});
+var pageContentContainer;
+var calendarTable = document.createElement("table");
+calendarTable.setAttribute("style", "border: 1px solid white");
 
-	function localizeDB(data, status) {
-		database = JSON.parse(data);
-		uniqueUsers = getNames();	
-		scores = getScores();
-		populateLayout();
+$(document).ready(function() {
+
+	pageContentContainer = document.getElementById("page-content-container");
+
+	if (document.getElementById("weekly-radio").checked) {
+		console.log("Weekly layout selected");
 	}
+});
 
-	function populateLayout() {
-		var table_users = document.createElement("table");
-		table_users.setAttribute("id", "table_users");
-		table_users.setAttribute("style", "width:100%; text-align:center; color:#428bca font-family:Roboto, Calibri, sans-serif; border-spacing:1em");
-
-		var tr_header = document.createElement("tr");
-		tr_header.setAttribute("id", "header");
-		tr_header.setAttribute("style", "font-weight:bold");
-
-		var td_header_user = document.createElement("td");
-		var td_header_score = document.createElement("td");
-		var td_header_button = document.createElement("td");
-
-		var label_header_user = document.createTextNode("Name");
-		var label_header_score = document.createTextNode("Score");
-		var label_header_button = document.createTextNode("Button");
-
-		td_header_user.appendChild(label_header_user);
-		td_header_score.appendChild(label_header_score);
-		td_header_button.appendChild(label_header_button);
-
-		tr_header.appendChild(td_header_user);
-		tr_header.appendChild(td_header_score);
-		tr_header.appendChild(td_header_button);
-
-		table_users.appendChild(tr_header);
-
-		for (j = 0; j < uniqueUsers.length; j++) {
-			name = uniqueUsers[j];
-
-			var tr_user = document.createElement("tr");
-			tr_user.setAttribute("id", name + "_row");
-			tr_user.setAttribute("style", "width:100%; height:auto;");
-
-			var td_user_name = document.createElement("td");
-			var td_user_score = document.createElement("td");
-			var td_user_button = document.createElement("td");
-			td_user_name.setAttribute("id", name + "_name_td");
-			td_user_score.setAttribute("id", name + "_score_td");
-			td_user_button.setAttribute("id", name + "_button_td");
-
-			var div_user_name = document.createElement("div");
-			var div_user_score = document.createElement("div");
-			var div_user_button = document.createElement("div");
-			div_user_name.setAttribute("id", name + "_div_name");
-			div_user_score.setAttribute("id", name + "_div_score");
-			div_user_button.setAttribute("id", name + "_button_div");
-
-			var label_user_button = document.createElement("p");
-			label_user_button.appendChild(document.createTextNode("+1 Game"));
-			label_user_button.setAttribute("style", "color:white");
-			var button_user = document.createElement("button");
-			button_user.setAttribute("id", name + "_button");
-			button_user.onclick = function() {
-				userToGiveAWin = this.getAttribute("id").split("_")[0];
-				plusOne(userToGiveAWin);
+function weeklyLayout() {
+	console.log("Weekly Layout Selected");
+	if (pageContentContainer != null) {
+		weeksCounter = 0;
+		daysCounter = 0;
+		
+		var months = document.createElement("tr");
+		months.setAttribute("style", "border: 1px solid white;color:white");
+		months.appendChild(document.createTextNode("MONTH " + 1));
+		while(weeksCounter < 5) {
+			var week = document.createElement("tr");
+			week.setAttribute("id", "week" + weeksCounter);
+			week.setAttribute("style", "border: 1px solid white;color:white");
+			months.appendChild(week);
+			week.appendChild(document.createTextNode("WEEK "+ weeksCounter));
+			
+			while (daysCounter < 5) {
+				var day = document.createElement("td");
+				day.setAttribute("id", "day" + daysCounter);
+				day.setAttribute("style", "border: 1px solid white;color:white");
+				day.appendChild(document.createTextNode("DAY " + daysCounter));
+				week.appendChild(day);
+				daysCounter++;
 			}
-			div_user_score.onclick = function() {
-				modal(this.innerHTML, this.parentElement.innerHTML, this.parentElement.parentElement);
+			daysCounter=0;
+			weeksCounter++;
 			}
 
-			tr_user.appendChild(td_user_name);
-			tr_user.appendChild(td_user_score);
-			tr_user.appendChild(td_user_button);
+			
+			
+		
+		calendarTable.setAttribute("style", "text-align:center;width:100%;height:100%");
+		calendarTable.appendChild(months);
+		pageContentContainer.setAttribute("style", "height:100%;width:100%");
+		pageContentContainer.appendChild(calendarTable);
+	}
+}
 
-			td_user_name.appendChild(div_user_name);
-			td_user_score.appendChild(div_user_score);
-			td_user_button.appendChild(div_user_button);
+function yearlyLayout() {
+	console.log("Yearly Layout Selected");
+}
 
-			div_user_name.appendChild(document.createTextNode(name)); 			
-			div_user_score.innerHTML = scores[j];
-			div_user_button.appendChild(button_user);
-			button_user.appendChild(label_user_button);
+function monthlyLayout() {
+	console.log("Monthly Layout Selected");
+}
 
-			table_users.appendChild(tr_user);
+
+var uniqueUsers = new Array();
+var scores = new Array();
+var database = new Array();
+
+function localizeDB(data, status) {
+	database = JSON.parse(data);
+	uniqueUsers = getNames();	
+	scores = getScores();
+	populateLayout();
+}
+
+function populateLayout() {
+	var table_users = document.createElement("table");
+	table_users.setAttribute("id", "table_users");
+	table_users.setAttribute("style", "width:100%; text-align:center; color:#428bca font-family:Roboto, Calibri, sans-serif; border-spacing:1em");
+
+	var tr_header = document.createElement("tr");
+	tr_header.setAttribute("id", "header");
+	tr_header.setAttribute("style", "font-weight:bold");
+
+	var td_header_user = document.createElement("td");
+	var td_header_score = document.createElement("td");
+	var td_header_button = document.createElement("td");
+
+	var label_header_user = document.createTextNode("Name");
+	var label_header_score = document.createTextNode("Score");
+	var label_header_button = document.createTextNode("Button");
+
+	td_header_user.appendChild(label_header_user);
+	td_header_score.appendChild(label_header_score);
+	td_header_button.appendChild(label_header_button);
+
+	tr_header.appendChild(td_header_user);
+	tr_header.appendChild(td_header_score);
+	tr_header.appendChild(td_header_button);
+
+	table_users.appendChild(tr_header);
+
+	for (j = 0; j < uniqueUsers.length; j++) {
+		name = uniqueUsers[j];
+
+		var tr_user = document.createElement("tr");
+		tr_user.setAttribute("id", name + "_row");
+		tr_user.setAttribute("style", "width:100%; height:auto;");
+
+		var td_user_name = document.createElement("td");
+		var td_user_score = document.createElement("td");
+		var td_user_button = document.createElement("td");
+		td_user_name.setAttribute("id", name + "_name_td");
+		td_user_score.setAttribute("id", name + "_score_td");
+		td_user_button.setAttribute("id", name + "_button_td");
+
+		var div_user_name = document.createElement("div");
+		var div_user_score = document.createElement("div");
+		var div_user_button = document.createElement("div");
+		div_user_name.setAttribute("id", name + "_div_name");
+		div_user_score.setAttribute("id", name + "_div_score");
+		div_user_button.setAttribute("id", name + "_button_div");
+
+		var label_user_button = document.createElement("p");
+		label_user_button.appendChild(document.createTextNode("+1 Game"));
+		label_user_button.setAttribute("style", "color:white");
+		var button_user = document.createElement("button");
+		button_user.setAttribute("id", name + "_button");
+		button_user.onclick = function() {
+			userToGiveAWin = this.getAttribute("id").split("_")[0];
+			plusOne(userToGiveAWin);
 		}
-		document.getElementById("dynamicUsersTable").appendChild(table_users);
-	}
+		div_user_score.onclick = function() {
+			modal(this.innerHTML, this.parentElement.innerHTML, this.parentElement.parentElement);
+		}
 
-	function plusOne(person) {
-		var operation = "addPoints"
-		$.post('connection.php?request=' + operation + '&user=' + person, function(data,status){addPointsCallback(data, status)});
-	}
+		tr_user.appendChild(td_user_name);
+		tr_user.appendChild(td_user_score);
+		tr_user.appendChild(td_user_button);
 
-	function addPointsCallback(data, status){
-		refreshScore(data);
-	}
+		td_user_name.appendChild(div_user_name);
+		td_user_score.appendChild(div_user_score);
+		td_user_button.appendChild(div_user_button);
 
-	function refreshScore(user) {
-		console.log(user);
-		for (j = 0; j < uniqueUsers.length; j++) {
-			if (capitalizeFirstLetter(user) == capitalizeFirstLetter(uniqueUsers[j])) {
-				scores[j]++;
-				original_div_user_score = document.getElementById(user + "_div_score");
-				original_div_user_score.innerHTML = scores[j];
-			}
+		div_user_name.appendChild(document.createTextNode(name)); 			
+		div_user_score.innerHTML = scores[j];
+		div_user_button.appendChild(button_user);
+		button_user.appendChild(label_user_button);
+
+		table_users.appendChild(tr_user);
+	}
+	document.getElementById("dynamicUsersTable").appendChild(table_users);
+}
+
+function plusOne(person) {
+	var operation = "addPoints"
+	$.post('connection.php?request=' + operation + '&user=' + person, function(data,status){addPointsCallback(data, status)});
+}
+
+function addPointsCallback(data, status){
+	refreshScore(data);
+}
+
+function refreshScore(user) {
+	console.log(user);
+	for (j = 0; j < uniqueUsers.length; j++) {
+		if (capitalizeFirstLetter(user) == capitalizeFirstLetter(uniqueUsers[j])) {
+			scores[j]++;
+			original_div_user_score = document.getElementById(user + "_div_score");
+			original_div_user_score.innerHTML = scores[j];
 		}
 	}
+}
 
-	function modal(score, userInnerHTML, userRow) {
-		userForModal = decapitalizeFirstLetter(userRow.id.split("_")[0]);
+function modal(score, userInnerHTML, userRow) {
+	userForModal = decapitalizeFirstLetter(userRow.id.split("_")[0]);
 
-		listTable = $("#listTable").empty();
-		for (j = database.length-1; j > 0; j--) {
-			if (decapitalizeFirstLetter(database[j].user) == userForModal) {	
-				tr = document.createElement("tr");
-				td_id = document.createElement("td");
-				td_details = document.createElement("td");
-				td_timestamps = document.createElement("td");
+	listTable = $("#listTable").empty();
+	for (j = database.length-1; j > 0; j--) {
+		if (decapitalizeFirstLetter(database[j].user) == userForModal) {	
+			tr = document.createElement("tr");
+			td_id = document.createElement("td");
+			td_details = document.createElement("td");
+			td_timestamps = document.createElement("td");
 				/////
 				editText_details = document.createElement("textarea");
 				editText_details.value = database[j].details;

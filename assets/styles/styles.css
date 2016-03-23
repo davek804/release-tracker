@@ -1,13 +1,10 @@
 html, body {
-	height:98%;
+	
 }
-
 body {
 	background: black;
 	border: 1px solid #428bca;
 	border-radius: 7px;
-	    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 h2 {
@@ -19,7 +16,7 @@ h2 {
 .container {
     display: table;
     width: 100%;
-    height: 100%;
+    height: auto !important;
 }
 
 .header-container {
@@ -42,8 +39,8 @@ h2 {
 
 .title-span {
 	padding-bottom:.25em;
-	padding-left:.75em;
-	padding-right:.75em;
+	padding-left: .25em;
+	padding-right: .25em;
 	font-family:Roboto, Calibri, sans-serif;  
 	color:white;  	
 	font-size:2em;	
@@ -54,25 +51,16 @@ h2 {
 	height: 0px;
 }
 
-.add-event-container {
+.menu-button-container {
 	display:table-cell;
-	height:0px;
-	width:40px;
 }
 
-#add-event-icon {
-  content:url("../images/add-release.png");
-  height: 30px;
-  width: 30px;
-  margin:auto;
-}
 
 #page-content-container {
-	display:table-row;
+	display:table;
 	height: 100%;
 	width: 100%;
 	margin: auto;
-	border-radius: 7px;
 }
 
 

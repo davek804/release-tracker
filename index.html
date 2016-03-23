@@ -9,37 +9,43 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles/drawer.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 	</script>
-	<script src="//code.jquery.com/jquery-1.10.2.js">
-	</script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
 	</script>
 	<script src="assets/scripts/main.js">
 	</script>
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+<script src='assets/fullcalendar/lib/jquery.min.js'></script>
+<script src='assets/fullcalendar/lib/moment.min.js'></script>
+<script src='assets/fullcalendar/fullcalendar.js'></script>
 	<title>Release Tracker</title>
 </head>
 <body>
 	<meta name="viewport" content="width=device-width,initial-scale=.8">
 	<div class="container">
 		<div class="header-container">
-			<div class="title-container">
+				<div class="title-container">
 			<span class="title-span">Release Tracker</span>
-			</div>
+		</div>
 			<div class="menu-container">
 				<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
 				<label for="drawer-toggle" id="drawer-toggle-label"></label>
+
 				<nav id="drawer">
 					<div id="layout-type-container">
 						<div id="layout-type-row">
-							<input type="radio" name="layout-type-radio" id="weekly-radio" value="weekly" checked>
+							<input type="radio" name="layout-type-radio" id="weekly-radio" value="weekly" checked onClick="weeklyLayout()">
 							<label for="weekly-radio" id="weekly-radio-label"></label>
 
-							<input type="radio" name="layout-type-radio" id="monthly-radio" value="monthly">
+							<input type="radio" name="layout-type-radio" id="monthly-radio" value="monthly" onClick="monthlyLayout()">
 							<label for="monthly-radio" id="monthly-radio-label"></label>
 
-							<input type="radio" name="layout-type-radio" id="yearly-radio" value="yearly">
+							<input type="radio" name="layout-type-radio" id="yearly-radio" value="yearly" onClick="yearlyLayout()">
 							<label for="yearly-radio" id="yearly-radio-label"></label>
-
 						</div>
+					</div>
+					<div id="add-release-container"> 
+						<div id="add-release-icon"></div>
+						<span class="add-release-title">Add a Release</span>
 					</div>
 					<h2>Lines of Business</h2>
 					<div class="menu-item">
@@ -78,9 +84,9 @@
 							<span class="menu-item-title">India PTO & Holidays</span>
 						</div>
 					</div>
-					<div class="drawer-ad">
-						<div class="actualAd">
-							<!--	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<<div class="drawer-ad">
+						<!--<div class="actualAd">
+								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 							
 							<ins class="adsbygoogle"
 							style="display:inline-block;width:300px;height:250px"
@@ -93,9 +99,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="add-event-container"> 
-			<div id="add-event-icon"></div>
-		</div>
+
 
 	</div>
 	<div id="page-content-container">
