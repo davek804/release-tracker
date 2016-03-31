@@ -5,6 +5,12 @@
  */
 
 
+
+ .ui-state-highlight {
+ 	color: #428bca !important;
+ }
+
+
 .fc {
 	direction: ltr;
 	text-align: left;
@@ -392,6 +398,7 @@ hr.fc-divider {
 
 .fc td.fc-today {
 	border-style: double; /* overcome neighboring borders */
+	color: #428bca;
 }
 
 
