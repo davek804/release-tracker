@@ -63,7 +63,10 @@ h2 {
 	margin: auto;
 }
 
-
+#calendar {
+	z-index:0;
+	padding:1%;
+}
 
 .menu-img {
 	max-width:100%;

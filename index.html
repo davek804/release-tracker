@@ -7,13 +7,14 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/drawer.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 	</script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
 	</script>
 	<script src="assets/scripts/main.js">
 	</script>
-	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+	<link rel='stylesheet' href='assets/fullcalendar/fullcalendar.css' />
+	<link rel='stylesheet' href='assets/styles/jquery-ui.css' />
 <script src='assets/fullcalendar/lib/jquery.min.js'></script>
 <script src='assets/fullcalendar/lib/moment.min.js'></script>
 <script src='assets/fullcalendar/fullcalendar.js'></script>
@@ -44,7 +45,7 @@
 						</div>
 					</div>
 					<div id="add-release-container"> 
-						<div id="add-release-icon"></div>
+						<div id="add-release-icon" onClick="addRelease()"></div>
 						<span class="add-release-title">Add a Release</span>
 					</div>
 					<h2>Lines of Business</h2>
@@ -84,7 +85,7 @@
 							<span class="menu-item-title">India PTO & Holidays</span>
 						</div>
 					</div>
-					<<div class="drawer-ad">
+					<div class="drawer-ad">
 						<!--<div class="actualAd">
 								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 							
@@ -103,8 +104,15 @@
 
 	</div>
 	<div id="page-content-container">
-
+				<div id="dialog" style="display:none;animation-name:example;animation-duration:4s;" >
+				<input autofocus style="display:none">
+				<span id "focusCatch" style="display:none"></span>
+				<table class="listTab" id="listTable"></table>
+			</div>
+	<div id="calendar"> </div>
 	</div>
+
+
 </div>
 </div>
 </body>

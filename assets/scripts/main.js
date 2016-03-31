@@ -1,5 +1,4 @@
-$('body').height($(window).height());
-$('body').width($(window).width()*2);
+
 
 var pageContentContainer;
 var calendarTable = document.createElement("table");
@@ -7,14 +6,76 @@ calendarTable.setAttribute("style", "border: 1px solid white");
 
 $(document).ready(function() {
 
+	var height = $('#page-content-container').height();
+	var width = $('page-content-container').width();
+
 	pageContentContainer = document.getElementById("page-content-container");
 
-	if (document.getElementById("weekly-radio").checked) {
+	$('body').height($(window).height()*.93);
+	$('body').width($(window).width()*.96);
+	$('#page-content-container').height();
+
+	/*if (document.getElementById("weekly-radio").checked) {
 		console.log("Weekly layout selected");
-	}
+	}*/
+
+	$('#calendar').fullCalendar({
+		dayClick: function() {
+        alert('a day has been clicked!');
+    },
+			weekends: false,
+			//height:$('#page-content-container').height()-65,
+			//width:$('#page-content-container').width()-50,
+			theme:true,
+			header: { 
+				left: 'basicDay basicWeek month addevent',
+				center: 'title',
+				right: 'today prev,next'
+			},
+			handleWindowResize: true
+
+        // put your options and callbacks here
+
+
+
+    });
+
+
+
 });
 
-function weeklyLayout() {
+function addRelease() {
+	console.log("add release clicked");
+
+	$("#dialog").dialog({
+			autoOpen: false,
+			modal: true,
+			width: $(document).width()*.75,
+			maxHeight: $(window).height()*.75,
+			title: "Add Release",
+			//focus: $("#focusCatch"),
+			//show: {
+				//effect: "scale",
+				//duration: 250
+			//},
+			//hide: {
+				//effect: "puff",
+				//duration: 250,
+			//}
+		});
+	//Open it when #opener is clicked
+	//$("#opener").click(function () {
+		$("#dialog").dialog("open");
+	//});
+	//When the button in the form is clicked, take the input value and set that as the value of `.myTarget`
+	$('.formSaver').on('click', function () {
+	    //$('.myTarget').text($('.myInput').val());
+	    $("#dialog").dialog('close');	    
+	});
+}
+
+
+function weeklyLayoutOld() {
 	console.log("Weekly Layout Selected");
 	if (pageContentContainer != null) {
 		weeksCounter = 0;

@@ -99,8 +99,9 @@ header {
   width: 300px;
   background: #2f2f2f;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   padding: 20px;
+  z-index:5;
   -webkit-overflow-scrolling: touch;
 }
 /* actual page content pane */
@@ -120,8 +121,10 @@ header {
 
 #drawer-toggle:checked ~ #drawer-toggle-label {
   height: 100%;
+  top:0;
   width: calc(100% - 300px);
-  /*background: rgba(255, 255, 255, .8);*/
+  background: rgba(255, 255, 255, .5);
+  z-index:5;
 }
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
